@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit=" return data()" action="abc.html">
+      <div>
+        <label for="full-name">Full Name</label>
+        <input
+          type="text"
+          id="myName"
+          title="Only letters and spaces allowed"
+        />
+      </div>
+
+      <div>
+        <label for="phone">contact number</label>
+        <input type="text" id="myNumber" />
+      </div>
+
+      <div>
+        <label for="email">email</label>
+        <input type="email" id="myEmail" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="myPassword" />
+      </div>
+
+      <div>
+        <button type="submit" title="all checked. submit now">Submit</button>
+      </div>
+    </form>
+    <script>
+      function data() {
+        let myName = document.getElementById("myName").value;
+        let myNumber = document.getElementById("myNumber").value;
+        let myEmail = document.getElementById("myEmail").value;
+        let myPassword = document.getElementById("myPassword").value;
+
+        if (
+          myName == "" ||
+          myNumber == "" ||
+          myEmail == "" ||
+          myPassword == ""
+        ) {
+          alert("All fields are mandatory");
+          return false;
+        } else if (myNumber.length !== 10) {
+          alert("please enter correct number. should be of 10 digit");
+          return false;
+        } else if (isNaN(myNumber)) {
+            alert ("only numbers allowed in contact number")
+            return false;
+        } else if(!myEmail.includes(".com" || "@") ){
+             alert("email is not correct")
+             return false;
+        }
+        else if (myPassword.length<=7 )
+            alert("password should have atleast 8 character ")
+
+
+         else {
+          true;
+        }
+      }
+    </script>
+  </body>
+</html>
