@@ -4,6 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    body{
+      background-color: grey;
+    }
+
+    form {
+    padding: 20px;
+}
+    
+div {
+    margin: 4px;
+    padding: 11px;
+}
+
+  </style>
   <body>
     <form onsubmit=" return data()" action="abc.html">
       <div>
@@ -59,9 +74,10 @@
              alert("email is not correct")
              return false;
         }
-        else if (myPassword.length<=7 )
+        else if (myPassword.length<=7 ) {
             alert("password should have atleast 8 character ")
-
+          return false;
+        }
 
          else {
           true;
@@ -70,3 +86,6 @@
     </script>
   </body>
 </html>
+
+
+
