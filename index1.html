@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: grey;
+    }
+    .form-holder {
+      display: flex;
+      flex-direction: column;
+      padding: 9px;
+      margin: 6px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #buttonbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <form>
+      <h2>Registration form</h2>
+      <div class="form-holder">
+        <div class="form-data">
+          <input
+            type="text"
+            class="form-elem"
+            placeholder="Username"
+            id="username"
+          />
+        </div>
+        <div class="error" id="usernameError"></div>
+      </div>
+      <div class="form-holder">
+        <div class="form-data">
+          <input
+            type="text"
+            class="form-elem"
+            placeholder="Phone Number"
+            id="phone"
+          />
+        </div>
+        <div class="error" id="phoneError"></div>
+      </div>
+      <div class="form-holder">
+        <div class="form-data">
+          <input
+            type="email"
+            class="form-elem"
+            placeholder="Email"
+            id="email"
+          />
+        </div>
+        <div class="error" id="emailError"></div>
+      </div>
+      <div class="form-holder">
+        <div class="form-data">
+          <input
+            type="password"
+            class="form-elem"
+            placeholder="Password"
+            id="password"
+          />
+        </div>
+        <div class="error" id="passwordError"></div>
+      </div>
+
+      <div class="form-holder">
+        <div class="form-data">
+          <input
+            type="password"
+            class="form-elem"
+            placeholder="Confirm Password"
+            id="cpassword"
+          />
+        </div>
+        <div class="error" id="cpasswordError"></div>
+      </div>
+      <div id="buttonbox">
+        <button class="form-submit" id="button">
+          <span>Register</span>
+        </button>
+      </div>
+    </form>
+    <script src="index1.html"></script>
+  </body>
+</html>
